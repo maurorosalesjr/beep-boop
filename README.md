@@ -67,3 +67,64 @@ function beepBoop(userInput) {
         console.log(newBeepBoopArr);
         }   
 expected output: [0, beep, boop, 3, 4, 5, 6, 7, 8, 9, beep, beep, boop]
+
+Describe: beepBoop();
+Test: should replace numbers in a user generated array. anything with a 3 changed to "wont you be my neighbor?", remaining 2s to boop and then all of the remaining numbers with a 1 to "beep!"
+code:
+    function beepBoop(userInput) {
+      const beepBoopArr = [];
+      const newBeepBoopArr =[];
+      for(let i = 0; i <= userInput; i++){
+        if((i + " ").indexOf(1) < 0) {
+          beepBoopArr.push(i);
+          } else {
+            beepBoopArr.push("Beep!");
+            } 
+        if((i + " ").indexOf(2) < 0) {
+          newBeepBoopArr.push(i);
+        } else {
+          beepBoopArr.splice(i, 1, "Boop!");
+          }
+        if((i + " ").indexOf(3) < 0) {
+            newBeepBoopArr.push(i);
+          } else {
+            beepBoopArr.splice(i, 1, "Wont you be my neighbor?");
+            }
+        } console.log(beepBoopArr);
+        console.log(newBeepBoopArr);
+        }   
+
+Expected output: [0, beep, boop, wont you be my neighbor, 4, 5, 6, 7, 8, 9, beep, beep, boop, wont you be my neighbor]
+
+Describe beepBoop()
+Test: refactor code to allow the same function processes but removing the need for newBeepBoopArr since it was useless
+code:
+    function beepBoop(userInput) {
+      const beepBoopArr = [];
+      for(let i = 0; i <= userInput; i++){
+        if((i + " ").indexOf(1) < 0) {
+          beepBoopArr.push(i);
+          } else {
+            beepBoopArr.push("Beep!");
+            } 
+        if((i + " ").indexOf(2) < 0) {
+          //Dont do anything
+        } else {
+          beepBoopArr.splice(i, 1, "Boop!");
+          }
+        if((i + " ").indexOf(3) < 0) {
+            //Dont do anything
+          } else {
+            beepBoopArr.splice(i, 1, "Wont you be my neighbor?");
+            }
+        } console.log(beepBoopArr);
+        }  
+Expected output: [0, beep, boop, wont you be my neighbor, 4, 5, 6, 7, 8, 9, beep, beep, boop, wont you be my neighbor]
+
+
+Describe: html;
+Test: create a submit field and button to get userInput for business logic.
+code:
+
+
+Expected Output: user inputes a number and an array comes out after hitting submit
