@@ -42,5 +42,28 @@ function beepBoop(userInput) {
     }
   }
   console.log(beepBoopArr);
-  
+}
+
 expected output:[0, beep, 2, 3, 4, 5, 6, 7, 8, 9, beep]
+
+Describe: beepBoop();
+Test: should replace number in Array if that number contains a "2" to "Boop!", while also doing the previous test
+code:
+function beepBoop(userInput) {
+  const beepBoopArr = [];
+  const newBeepBoopArr =[];
+  for(let i = 0; i <= userInput; i++){
+    if((i + " ").indexOf(1) < 0) {
+      beepBoopArr.push(i);
+      } else {
+        beepBoopArr.push("Beep!");
+        } 
+    if((i + " ").indexOf(2) < 0) {
+      newBeepBoopArr.push(i);
+    } else {
+      beepBoopArr.splice(i, 2, "Boop!");
+      }
+        } console.log(beepBoopArr);
+        console.log(newBeepBoopArr);
+        }   
+expected output: [0, beep, boop, 3, 4, 5, 6, 7, 8, 9, beep, beep, boop]
