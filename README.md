@@ -61,7 +61,7 @@ function beepBoop(userInput) {
     if((i + " ").indexOf(2) < 0) {
       newBeepBoopArr.push(i);
     } else {
-      beepBoopArr.splice(i, 2, "Boop!");
+      beepBoopArr.splice(i, 1, "Boop!");
       }
         } console.log(beepBoopArr);
         console.log(newBeepBoopArr);
