@@ -124,7 +124,48 @@ Expected output: [0, beep, boop, wont you be my neighbor, 4, 5, 6, 7, 8, 9, beep
 
 Describe: html;
 Test: create a submit field and button to get userInput for business logic.
-code:
+code:JS UI
+$(document).ready(function() {
+  $("form#Beeps").submit(function(event) {
+    event.preventDefault();
+    const userInput = $("input#input").val();
+    const beepBoopArr = beepBoop(userInput);
+    $(".returner").css("display", "block");
 
+    if(parseInt(userInput) < 100) {
+      $("#result").html(beepBoopArr);
+    } else {
+      $("#result").html("whoa, whoa whoa... thats too many for this neighbor")
+    }
+    $(".returner").show()
+  });
+})
+HTML
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Beeps and Boops</title>
+</head>
+<body>
+<h1>Wont you please input a number?</h1>
+  <div class="container">
+  <form id="Beeps">
+    <div class="form-group">
+      <label for="input">Enter a positive integer (less than 100):</label>
+      <input id="input" type="number" >
+      <br>
+    </div>
+      <button type="submit" class="btn btn-success">Submit!</button>
+  </form>
 
+  <div class="returner">
+  <p>here is your array: <span id="result"></span></p>
+  </div>
+  </div>
+</body>
+</html>
 Expected Output: user inputes a number and an array comes out after hitting submit

@@ -9,8 +9,8 @@ function beepBoop(userInput) {
         };
     if((i + " ").indexOf(2) < 0) {
       //Dont do anything
-    } else {
-      beepBoopArr.splice(i, 1, "Boop!");
+      } else {
+        beepBoopArr.splice(i, 1, "Boop!");
       }; 
     if((i + " ").indexOf(3) < 0) {
         //Dont do anything
@@ -23,19 +23,17 @@ function beepBoop(userInput) {
 
 
 $(document).ready(function() {
-  $("#Beeps").submit(function(event) {
+  $("form#Beeps").submit(function(event) {
     event.preventDefault();
     const userInput = $("input#input").val();
     const beepBoopArr = beepBoop(userInput);
-    
+    $(".returner").css("display", "block");
 
-    if(userInput < 100) {
-      $(".returner").show();
-      $("#array").show(beepBoopArr);
-    } else{
-      $(".returner").append("whoa, whoa whoa... thats too many for this neighbor")
+    if(parseInt(userInput) < 100) {
+      $("#result").html(beepBoopArr);
+    } else {
+      $("#result").html("whoa, whoa whoa... thats too many for this neighbor")
     }
     $(".returner").show()
-    
   });
-
+})
