@@ -15,7 +15,7 @@ function beepBoop(userInput) {
     if((i + " ").indexOf(3) < 0) {
         //Dont do anything
       } else {
-        beepBoopArr.splice(i, 1, "Wont you be my neighbor?");
+        beepBoopArr.splice(i, 1, "Won't you be my neighbor?");
         };
     }; console.log(beepBoopArr);
     return beepBoopArr;
@@ -32,7 +32,7 @@ $(document).ready(function() {
     if(parseInt(userInput) < 100) {
       $("#result").html(beepBoopArr);
     } else {
-      $("#result").html("whoa, whoa whoa... thats too many for this neighbor")
+      $("#result").html("Whoa, whoa whoa... That's too big of a number for this neighbor")
     }
     $(".returner").show()
   });

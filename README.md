@@ -1,3 +1,40 @@
+# Beep-Boop
+
+#### By Mauro Rosales jr
+
+#### This application will create a funny array
+
+## Technologies Used
+
+* vscode
+* chrome
+* macbook
+* a lot of swearing
+
+## Description
+
+This app will create an array from a number, 0-99, that a user inputs. Any number with a 1 will turn into "Beep!". Any number with a 2, including numbers that have a 1, will turn into "Boop!". Finally, any number with a 3, including numbers with 1s and 2s, will turn into "Won't you be my Nieghbor?'
+
+## Setup/Installation Requirements
+
+* launch web browser of your choice, then use link: https://github.com/maurorosalesjr/beep-boop/tree/gh-pages
+* on github website, fork repo
+* once forked, use your terminal to clone repo using "git clone https://github.com/maurorosalesjr/beep-boop/tree/gh-pages
+* Once cloned, open files using vscode
+* either click and drag html file to browser address bar or
+* click "go live" button at the bottom of the vscode winow
+* enter a number 0-99 to let the app fill out an array.
+* be sure its nor more than 99, you might get an error...
+
+
+## Known Bugs
+
+* no known bugs
+
+## License
+
+if you have any issues, please email me at mauro.rosales247@gmail.com for a refund
+
 ## Tests
 Describe: beepBoop();
 Test: should turn user input into an array, from 0 to users inputted number
@@ -169,3 +206,5 @@ HTML
 </body>
 </html>
 Expected Output: user inputes a number and an array comes out after hitting submit
+
+Copyright (c) April 2022 Mauro Rosales Jr

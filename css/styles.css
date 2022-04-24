@@ -1,19 +1,35 @@
 .container {
-  margin: 10%;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: blanchedalmond;
+  border: solid black 25px;
 
 }
 
 h1 {
   text-align: center;
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-shadow: 2px 2px gray
 }
 
 .returner {
+  margin-right: 15%;
+  margin-left: 15%;
+  padding: 10%;
   display: none;
   background-color: beige;
   
 }
 
 #result {
-  background-color: violet;
+  text-decoration-color: chocolate;
 }
 
+img {
+  display: block;
+  margin-left: 33%;
+  margin-right: 33%;
+  padding: 5px;
+}
