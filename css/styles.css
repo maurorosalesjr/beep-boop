@@ -3,6 +3,17 @@
 
 }
 
-.array {
-  color: beige;
+h1 {
+  text-align: center;
 }
+
+/*.returner {
+  display: none;
+  background-color: beige;
+  
+}*/
+
+#array {
+  background-color: violet;
+}
+
