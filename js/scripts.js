@@ -30,9 +30,12 @@ $(document).ready(function() {
     $(".returner").css("display", "block");
 
     if(parseInt(userInput) < 100) {
-      $("#result").html(beepBoopArr);
+      $("#result").html(beepBoopArr.join(", "));
     } else {
       $("#result").html("Whoa, whoa whoa... That's too big of a number for this neighbor")
+    }
+    if(parseInt(userInput) < 0) {
+      $("#result").html("Whoa, whoa whoa... This neighborhood only deals with positive numbers less than 100")
     }
     $(".returner").show()
   });
